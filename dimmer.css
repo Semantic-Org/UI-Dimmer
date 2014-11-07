@@ -112,7 +112,6 @@ body.dimmed.dimmable {
 body.dimmable > .dimmer {
   position: fixed;
 }
-<<<<<<< HEAD
 /*
 body.dimmable > :not(.dimmer) {
   filter: @elementStartFilter;
@@ -122,12 +121,6 @@ body.dimmed.dimmable > :not(.dimmer) {
   transition: @elementTransition;
 }
 */
-=======
-body.dimmed.dimmable > :not(.dimmer) {
-  -webkit-filter: '';
-          filter: '';
-}
->>>>>>> f4748b5dffda27315ad188596099422978a59d43
 
 /*--------------
     Aligned
@@ -186,12 +179,9 @@ body.dimmed.dimmable > :not(.dimmer) {
          Theme Overrides
 *******************************/
 
-<<<<<<< HEAD
 
 
 /*******************************
         User Overrides
 *******************************/
 
-=======
->>>>>>> f4748b5dffda27315ad188596099422978a59d43
