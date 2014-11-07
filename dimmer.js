@@ -218,10 +218,17 @@ $.fn.dimmer = function(parameters) {
                   animation : settings.transition + ' in',
                   queue       : false,
                   duration  : module.get.duration(),
+<<<<<<< HEAD
                   onStart   : function() {
                     module.set.dimmed();
                   },
                   onComplete : function() {
+=======
+                  start     : function() {
+                    module.set.dimmed();
+                  },
+                  complete  : function() {
+>>>>>>> f4748b5dffda27315ad188596099422978a59d43
                     module.set.active();
                     callback();
                   }
@@ -255,6 +262,7 @@ $.fn.dimmer = function(parameters) {
               module.verbose('Hiding dimmer with css');
               $dimmer
                 .transition({
+<<<<<<< HEAD
                   animation  : settings.transition + ' out',
                   queue      : false,
                   duration   : module.get.duration(),
@@ -262,6 +270,15 @@ $.fn.dimmer = function(parameters) {
                     module.remove.dimmed();
                   },
                   onComplete : function() {
+=======
+                  animation   : settings.transition + ' out',
+                  queue       : false,
+                  duration    : module.get.duration(),
+                  start: function() {
+                    module.remove.dimmed();
+                  },
+                  complete  : function() {
+>>>>>>> f4748b5dffda27315ad188596099422978a59d43
                     module.remove.active();
                     callback();
                   }

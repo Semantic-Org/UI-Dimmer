@@ -14,5 +14,9 @@
     "jquery": "x.x.x"
   },
   "main": "dimmer.js",
+<<<<<<< HEAD
   "version": "1.0.0-beta"
+=======
+  "version": "1.0.0"
+>>>>>>> f4748b5dffda27315ad188596099422978a59d43
 }
