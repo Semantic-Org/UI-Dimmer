@@ -1,4 +1,4 @@
-### Version 1.0.0 - XX XX, 2014
+### Version 1.0.0 - November 24, 2014
 
 - **Dimmer** - Dimmer will now automatically determine whether click-to-close is enabled by ``settings.on``
 - **Dimmer** - Multiple dimmers can now be used on the same context with ``dimmerName``
