@@ -1,3 +1,18 @@
+### Version 1.3.2 - December 17, 2014
+
+- **Modal** - Fixed issue with modal dimmer appearing cut off in some browsers, and not hiding
+
+### Version 1.3.0 - December 17, 2014
+
+- **Modal/Dimmer** - Fixed issues with modal hiding during showing and showing during hiding, fixed issues with "hiding other" modals while a modal is mid-animation.
+
+### Version 1.2.0 - December 08, 2014
+
+- **Modal** - Fixes issues with multiple modals sometimes not closing dimmers
+- **Modal** - "Hammer" clicking multiple times on a hiding dimmer no longer causes animation issues
+- **Sidebar** - Fixes issue with multiple sidebars sometimes causing dimmer to close prematurely
+- **Sidebar** - Dimmer can now be clicked even before sidebar has finished showing to immediately close sidebar
+
 ### Version 1.0.0 - November 24, 2014
 
 - **Dimmer** - Dimmer will now automatically determine whether click-to-close is enabled by ``settings.on``
