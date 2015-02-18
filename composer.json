@@ -15,5 +15,17 @@
     "framework"
   ],
   "license": "MIT",
+<<<<<<< HEAD
   "version": "1.9.0"
+=======
+  "dependencies": {
+    "jquery": "x.x.x"
+  },
+  "main": "dimmer.js",
+<<<<<<< HEAD
+  "version": "1.0.0-beta"
+=======
+  "version": "1.7.2"
+>>>>>>> 5a902e28cf78bcad2ee9fccbdf8300b890118949
+>>>>>>> da19616039b160c31f1ce8b0afe27b1980f1123b
 }

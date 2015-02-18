@@ -24,6 +24,15 @@
     "http://semantic-ui.mit-license.org/"
   ],
   "main": [
+<<<<<<< HEAD
     "dimmer.css"
   ]
+=======
+    "dimmer.js",
+    "dimmer.css"
+  ],
+  "dependencies": {
+    "jquery": ">=1.8"
+  }
+>>>>>>> da19616039b160c31f1ce8b0afe27b1980f1123b
 }

@@ -16,12 +16,15 @@ bower install semantic-ui-dimmer
 npm install semantic-ui-dimmer
 ```
 
+<<<<<<< HEAD
 #### To install with Meteor
 ```
 meteor add semantic:ui-dimmer
 ```
 
 
+=======
+>>>>>>> da19616039b160c31f1ce8b0afe27b1980f1123b
 ## Addendum
 
 This element's definitions (required class names, html structures) are available in the [UI Docs](http://www.semantic-ui.com)

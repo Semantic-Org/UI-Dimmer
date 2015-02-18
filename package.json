@@ -1,6 +1,14 @@
 {
   "name": "semantic-ui-dimmer",
+<<<<<<< HEAD
   "version": "1.9.0",
+=======
+<<<<<<< HEAD
+  "version": "1.0.0-beta",
+=======
+  "version": "1.7.2",
+>>>>>>> 5a902e28cf78bcad2ee9fccbdf8300b890118949
+>>>>>>> da19616039b160c31f1ce8b0afe27b1980f1123b
   "title": "Semantic UI - Dimmer",
   "description": "Single component release of dimmer",
   "homepage": "http://www.semantic-ui.com",
@@ -13,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/Semantic-Org/Semantic-UI/issues"
   },
+<<<<<<< HEAD
   "devDependencies": {}
+=======
+  "devDependencies": {},
+  "dependencies": {
+    "jquery": "x.x.x"
+  },
+  "main": "index.js"
+>>>>>>> da19616039b160c31f1ce8b0afe27b1980f1123b
 }
