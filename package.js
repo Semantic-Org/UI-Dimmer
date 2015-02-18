@@ -5,7 +5,7 @@ var
 Package.describe({
   name    : 'semantic:ui-dimmer',
   summary : 'Semantic UI - Dimmer (official): Single component release of dimmer',
-  version : '1.9.9',
+  version : '1.9.0',
   git     : 'git://github.com/Semantic-Org/UI-Dimmer.git',
 });
 
