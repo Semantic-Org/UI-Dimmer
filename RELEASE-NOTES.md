@@ -1,5 +1,7 @@
-<<<<<<< HEAD
-=======
+### Version 1.8.0 - January 23, 2015
+
+- **Popup** - Popups will now by default appear over all UI content, even dimmers.
+
 ### Version 1.4.0 - December 22, 2014
 
 - **Modal** - Modal now accepts custom dimmer settings with setting `dimmerSettings``
@@ -62,4 +64,3 @@
 - Fixes issues with dimmer settings sticking between separate modals with the same dimmer.
 
 ### Version 0.1.0 - Sep 25, 2013
->>>>>>> 5a902e28cf78bcad2ee9fccbdf8300b890118949
