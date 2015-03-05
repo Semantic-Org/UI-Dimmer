@@ -1,3 +1,8 @@
+### Version 1.11.0 - March 3, 2015
+
+- **Modal** - Modal no longer hides and reshows dimmer when opening a modal with another modal open with `exclusive: true`
+- **Dimmer** - Add `opacity` setting to override css value. Add to docs several undocumented settings, like `useCSS`, and `variation`.
+
 ### Version 1.8.0 - January 23, 2015
 
 - **Popup** - Popups will now by default appear over all UI content, even dimmers.
