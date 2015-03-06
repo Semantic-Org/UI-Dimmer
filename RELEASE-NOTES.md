@@ -1,3 +1,7 @@
+### Version 1.11.2 - March 6, 2015
+
+- **Card/Dimmer** - Fix dimmer z-index being too high when inside a `ui card`. Added variable for specifying default dimmer color inside card.
+
 ### Version 1.11.0 - March 3, 2015
 
 - **Modal** - Modal no longer hides and reshows dimmer when opening a modal with another modal open with `exclusive: true`
