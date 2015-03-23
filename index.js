@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 1.11.4 - Dimmer
+ * # Semantic UI 1.11.5 - Dimmer
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -156,7 +156,7 @@ module.exports = function(parameters) {
           ;
           if(settings.variation) {
             module.debug('Creating dimmer with variation', settings.variation);
-            $element.addClass(className.variation);
+            $element.addClass(settings.variation);
           }
           if(settings.dimmerName) {
             module.debug('Creating named dimmer', settings.dimmerName);
