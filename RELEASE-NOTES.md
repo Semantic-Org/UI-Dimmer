@@ -1,3 +1,13 @@
+### Version 2.0.1 - June 30, 2015
+
+- **Dimmer** - Dimmer now removes variations like `blurring` and `inverted` when `destroy` is called.
+
+### Version 2.0.0 - June 30, 2015
+
+- **Dimmer** - Dimmers now have a `blurring` variation which apply a glass-like effect when dimmed
+- **Modal** - Added new settings `blurring` and `inverted` which automatically set a modal's dimmer to either inverted or blurring.
+- **Image** - `rounded image` and `circular image` now apply border radius to all child elements, fixing dimmers, and other content rounding
+
 ### Version 1.11.5 - March 23, 2015
 
 - **Card** - Fixes dimmer background shorthand property causes transparent dimmer in minified version
@@ -47,7 +57,7 @@
 
 ### Version 0.10.3 - Dec 22, 2013
 
-- **Modal** - Fixes element detatching sometimes in case where it is already inside a dimmer
+- **Modal** - Fixes element detaching sometimes in case where it is already inside a dimmer
 
 ### Version 0.7.0 - Oct 22, 2013
 
