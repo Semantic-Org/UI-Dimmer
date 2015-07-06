@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.0.0 - Dimmer
+ * # Semantic UI 2.0.1 - Dimmer
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -83,28 +83,8 @@ module.exports = function(parameters) {
 
         initialize: function() {
           module.debug('Initializing dimmer', settings);
-          if(settings.on == 'hover') {
-            $dimmable
-              .on('mouseenter' + eventNamespace, module.show)
-              .on('mouseleave' + eventNamespace, module.hide)
-            ;
-          }
-          else if(settings.on == 'click') {
-            $dimmable
-              .on(clickEvent + eventNamespace, module.toggle)
-            ;
-          }
-          if( module.is.page() ) {
-            module.debug('Setting as a page dimmer', $dimmable);
-            module.set.pageDimmer();
-          }
 
-          if( module.is.closable() ) {
-            module.verbose('Adding dimmer close event', $dimmer);
-            $dimmable
-              .on(clickEvent + eventNamespace, selector.dimmer, module.event.click)
-            ;
-          }
+          module.bind.events();
           module.set.dimmable();
           module.instantiate();
         },
@@ -119,12 +99,46 @@ module.exports = function(parameters) {
 
         destroy: function() {
           module.verbose('Destroying previous module', $dimmer);
-          $module
-            .removeData(moduleNamespace)
-          ;
+          module.unbind.events();
+          module.remove.variation();
           $dimmable
             .off(eventNamespace)
           ;
+        },
+
+        bind: {
+          events: function() {
+            if(settings.on == 'hover') {
+              $dimmable
+                .on('mouseenter' + eventNamespace, module.show)
+                .on('mouseleave' + eventNamespace, module.hide)
+              ;
+            }
+            else if(settings.on == 'click') {
+              $dimmable
+                .on(clickEvent + eventNamespace, module.toggle)
+              ;
+            }
+            if( module.is.page() ) {
+              module.debug('Setting as a page dimmer', $dimmable);
+              module.set.pageDimmer();
+            }
+
+            if( module.is.closable() ) {
+              module.verbose('Adding dimmer close event', $dimmer);
+              $dimmable
+                .on(clickEvent + eventNamespace, selector.dimmer, module.event.click)
+              ;
+            }
+          }
+        },
+
+        unbind: {
+          events: function() {
+            $module
+              .removeData(moduleNamespace)
+            ;
+          }
         },
 
         event: {
@@ -368,11 +382,11 @@ module.exports = function(parameters) {
         set: {
           opacity: function(opacity) {
             var
-              opacity    = settings.opacity || opacity,
               color      = $dimmer.css('background-color'),
               colorArray = color.split(','),
               isRGBA     = (colorArray && colorArray.length == 4)
             ;
+            opacity    = settings.opacity || opacity;
             if(isRGBA) {
               colorArray[3] = opacity + ')';
               color         = colorArray.join(',');
@@ -397,6 +411,12 @@ module.exports = function(parameters) {
           },
           disabled: function() {
             $dimmer.addClass(className.disabled);
+          },
+          variation: function(variation) {
+            variation = variation || settings.variation;
+            if(variation) {
+              $dimmer.addClass(variation);
+            }
           }
         },
 
@@ -411,6 +431,12 @@ module.exports = function(parameters) {
           },
           disabled: function() {
             $dimmer.removeClass(className.disabled);
+          },
+          variation: function(variation) {
+            variation = variation || settings.variation;
+            if(variation) {
+              $dimmer.removeClass(variation);
+            }
           }
         },
 
