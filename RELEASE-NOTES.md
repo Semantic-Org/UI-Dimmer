@@ -1,4 +1,4 @@
-### Version 2.0.1 - June 30, 2015
+### Version 2.0.1 - July 6, 2015
 
 - **Dimmer** - Dimmer now removes variations like `blurring` and `inverted` when `destroy` is called.
 
