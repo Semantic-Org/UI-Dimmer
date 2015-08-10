@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.0.7 - Dimmer
+ * # Semantic UI 2.0.8 - Dimmer
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -622,7 +622,7 @@ module.exports = function(parameters) {
   ;
 };
 
-module.exports.settings = {
+_module.exports.settings = {
 
   name        : 'Dimmer',
   namespace   : 'dimmer',
