@@ -1,3 +1,7 @@
+### Version 2.1.5 - Nov 1, 2015
+
+- **Dimmer** - Dimmer can now works correctly with `opacity: 0` #3167 **Thanks @mdehoog**
+
 ### Version 2.0.1 - July 6, 2015
 
 - **Dimmer** - Dimmer now removes variations like `blurring` and `inverted` when `destroy` is called.
