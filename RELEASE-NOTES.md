@@ -1,6 +1,6 @@
 ### Version 2.1.5 - Nov 1, 2015
 
-- **Dimmer** - Dimmer can now works correctly with `opacity: 0` #3167 **Thanks @mdehoog**
+- **Dimmer** - Dimmer can now works correctly with `opacity: 0` [#3167](https://github.com/Semantic-Org/Semantic-UI/issues/3167) **Thanks @mdehoog**
 
 ### Version 2.0.1 - July 6, 2015
 
