@@ -1,3 +1,8 @@
+### Version 2.2.0 - June 26, 2016
+
+- **Modal** - RGB values set for dimmer `background-color` were not being correctly interpreted [#3665](https://github.com/Semantic-Org/Semantic-UI/issues/3665) **Thanks @larsbo**
+- **Modal/Dimmer** - Fixed issue with `destroy` not properly removing events from dimmer [#3200](https://github.com/Semantic-Org/Semantic-UI/issues/3200)
+
 ### Version 2.1.5 - Nov 1, 2015
 
 - **Dimmer** - Dimmer can now works correctly with `opacity: 0` [#3167](https://github.com/Semantic-Org/Semantic-UI/issues/3167) **Thanks @mdehoog**
