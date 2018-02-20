@@ -1,3 +1,8 @@
+### Version 2.3.0 - Feb 19, 2018
+
+- **Dimmer** - Dimmers now have centered content with a single wrapping `content` element.
+- **Dimmer** - Fixes issue with `inverted dimmer` with `content` having wrong text color **Thanks @rijk** [#4631](https://github.com/Semantic-Org/Semantic-UI/issues/4631)
+
 ### Version 2.2.11 - July 11, 2017
 
 - **Site** - Site now includes custom styles for in-page UI scrollbars (but not actual page scrollbar) by default in WebKit/Chrome. Components with inverted content like dimmer include an inverted scrollbar.  You can disable this by setting `@useCustomScrollbars: false` in your `site.variables`
