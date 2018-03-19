@@ -1,4 +1,4 @@
-### Version 2.3.0 - Feb 19, 2018
+### Version 2.3.0 - Feb 20, 2018
 
 - **Dimmer** - Dimmers now have centered content with a single wrapping `content` element.
 - **Dimmer** - Fixes issue with `inverted dimmer` with `content` having wrong text color **Thanks @rijk** [#4631](https://github.com/Semantic-Org/Semantic-UI/issues/4631)
