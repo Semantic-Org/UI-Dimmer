@@ -1,3 +1,7 @@
+### Version 2.3.2 - June 18, 2018
+
+- **Modal** - Modal and Dimmer now prevent background page from scrolling on mobile or where touch events are present
+
 ### Version 2.3.0 - Feb 20, 2018
 
 - **Dimmer** - Dimmers now have centered content with a single wrapping `content` element.
