@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.3.3 - Dimmer
+ * # Semantic UI 2.4.0 - Dimmer
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -84,7 +84,6 @@ module.exports = function(parameters) {
             else {
               $dimmer = module.create();
             }
-            module.set.variation();
           }
         },
 
@@ -115,10 +114,6 @@ module.exports = function(parameters) {
 
         bind: {
           events: function() {
-            if(module.is.page()) {
-              // touch events default to passive, due to changes in chrome to optimize mobile perf
-              $dimmable.get(0).addEventListener('touchmove', module.event.preventScroll, { passive: false });
-            }
             if(settings.on == 'hover') {
               $dimmable
                 .on('mouseenter' + eventNamespace, module.show)
@@ -146,9 +141,6 @@ module.exports = function(parameters) {
 
         unbind: {
           events: function() {
-            if(module.is.page()) {
-              $dimmable.get(0).removeEventListener('touchmove', module.event.preventScroll, { passive: false });
-            }
             $module
               .removeData(moduleNamespace)
             ;
@@ -166,9 +158,6 @@ module.exports = function(parameters) {
               event.stopImmediatePropagation();
             }
           },
-          preventScroll: function(event) {
-            event.preventDefault();
-          }
         },
 
         addContent: function(element) {
@@ -201,6 +190,7 @@ module.exports = function(parameters) {
             : function(){}
           ;
           module.debug('Showing dimmer', $dimmer, settings);
+          module.set.variation();
           if( (!module.is.dimmed() || module.is.animating()) && module.is.enabled() ) {
             module.animate.show(callback);
             settings.onShow.call(element);
@@ -244,12 +234,22 @@ module.exports = function(parameters) {
               : function(){}
             ;
             if(settings.useCSS && $.fn.transition !== undefined && $dimmer.transition('is supported')) {
+              if(settings.useFlex) {
+                module.debug('Using flex dimmer');
+                module.remove.legacy();
+              }
+              else {
+                module.debug('Using legacy non-flex dimmer');
+                module.set.legacy();
+              }
               if(settings.opacity !== 'auto') {
                 module.set.opacity();
               }
               $dimmer
                 .transition({
-                  displayType : 'flex',
+                  displayType : settings.useFlex
+                    ? 'flex'
+                    : 'block',
                   animation   : settings.transition + ' in',
                   queue       : false,
                   duration    : module.get.duration(),
@@ -294,7 +294,9 @@ module.exports = function(parameters) {
               module.verbose('Hiding dimmer with css');
               $dimmer
                 .transition({
-                  displayType : 'flex',
+                  displayType : settings.useFlex
+                    ? 'flex'
+                    : 'block',
                   animation   : settings.transition + ' out',
                   queue       : false,
                   duration    : module.get.duration(),
@@ -303,6 +305,7 @@ module.exports = function(parameters) {
                     module.remove.dimmed();
                   },
                   onComplete  : function() {
+                    module.remove.variation();
                     module.remove.active();
                     callback();
                   }
@@ -416,6 +419,9 @@ module.exports = function(parameters) {
             module.debug('Setting opacity to', opacity);
             $dimmer.css('background-color', color);
           },
+          legacy: function() {
+            $dimmer.addClass(className.legacy);
+          },
           active: function() {
             $dimmer.addClass(className.active);
           },
@@ -444,6 +450,9 @@ module.exports = function(parameters) {
             $dimmer
               .removeClass(className.active)
             ;
+          },
+          legacy: function() {
+            $dimmer.removeClass(className.legacy);
           },
           dimmed: function() {
             $dimmable.removeClass(className.dimmed);
@@ -658,6 +667,9 @@ _module.exports.settings = {
   verbose     : false,
   performance : true,
 
+  // whether should use flex layout
+  useFlex     : true,
+
   // name to distinguish between multiple dimmers in context
   dimmerName  : false,
 
@@ -701,6 +713,7 @@ _module.exports.settings = {
     dimmer     : 'dimmer',
     disabled   : 'disabled',
     hide       : 'hide',
+    legacy     : 'legacy',
     pageDimmer : 'page',
     show       : 'show'
   },

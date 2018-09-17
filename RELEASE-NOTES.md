@@ -1,3 +1,8 @@
+### Version 2.4.0 - Sep 17, 2018
+
+- **Modal/Dimmer** - Modals and dimmers now include a new setting `useFlex` which defaults to `auto`. Modals and dimmers will automatically revert to using non-flex layouts when there may be layout issues with using flexbox. Modals will fall back to JS position when `detachable: false` is used or with IE11/Edge (Absolutely positioned elements inside flex containers in IE behave differently).
+- **Dimmer** - Dimmer now sets `variation` at runtime, to support run-time swapping between `top aligned` and `middle aligned` using `.dimmer('setting', 'variation', 'top aligned')`
+
 ### Version 2.3.2 - June 18, 2018
 
 - **Modal** - Modal and Dimmer now prevent background page from scrolling on mobile or where touch events are present
